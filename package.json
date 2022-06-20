@@ -1,0 +1,19 @@
+{
+  "name": "tarot-bot",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "npm run clean && tsc --build",
+    "serve": "npm run clean && tsc && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"tsc -w --preserveWatchOutput\" \"nodemon --delay 100ms dist/tarot-bot/index.js\"",
+    "clean": "rimraf dist/tarot-bot"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.41",
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
