@@ -9,5 +9,9 @@
 ## Dev
 - `npm run serve`
 
+## Lint
+- `npm run lint`
+- `npm run lint -- --fix`
+
 ## Deploy
 - `npm run build`
