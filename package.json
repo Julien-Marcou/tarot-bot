@@ -8,6 +8,7 @@
   },
   "private": true,
   "dependencies": {
+    "socket.io-client": "^4.5.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.41",
