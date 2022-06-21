@@ -45,4 +45,8 @@ export class Game {
     });
   }
 
+  stop(): void {
+    this.client.socket.close();
+  }
+
 }
