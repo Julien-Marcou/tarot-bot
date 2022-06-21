@@ -17,5 +17,7 @@
 - `npm run lint`
 - `npm run lint -- --fix`
 
-## Deploy
+## Prod
+
 - `npm run build`
+- `npm run start`
