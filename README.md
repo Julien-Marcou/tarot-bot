@@ -1,15 +1,19 @@
 # Tarot Bot
 
 ## Requirements
+
 - Node.js `v16`
 
 ## Setup
+
 - `npm install`
 
 ## Dev
-- `npm run serve`
+
+- `npm run watch`
 
 ## Lint
+
 - `npm run lint`
 - `npm run lint -- --fix`
 

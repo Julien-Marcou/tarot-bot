@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "npm run clean && tsc --build",
-    "serve": "npm run clean && tsc && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"tsc -w --preserveWatchOutput\" \"nodemon --delay 100ms dist/tarot-bot/index.js\"",
+    "watch": "npm run clean && tsc && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"tsc -w --preserveWatchOutput\" \"nodemon --delay 100ms dist/tarot-bot/index.js\"",
     "clean": "rimraf dist/tarot-bot",
     "lint": "eslint \"**/*.ts\""
   },
