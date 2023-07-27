@@ -24,6 +24,43 @@ export class Game {
   async start(): Promise<void> {
     await this.client.createOrJoinRoom(this.roomSettings);
 
+    this.client.socket.on('game.state', (state) => {
+      console.log('Ready to start the game');
+      console.log(`You are at the position ${state.ownPosition}`);
+    });
+
+    this.client.socket.on('game.handReceived', (hand) => {
+      console.log('New distribution');
+      console.log(hand);
+    });
+
+    this.client.socket.on('game.newTaker', (takerPosition) => {
+      console.log('Game started');
+      console.log(`Taker is at position ${takerPosition}`);
+    });
+
+    this.client.socket.on('game.cardPlayed', (playerPosition, playedCard) => {
+      console.log(`Player at position ${playerPosition} played ${JSON.stringify(playedCard)}`);
+    });
+
+    this.client.socket.on('game.trickWon', (playerPosition) => {
+      console.log(`Player at position ${playerPosition} won the trick`);
+    });
+
+    this.client.socket.on('game.finishedGame', (finishedGameState, matchState) => {
+      console.log('Game finished');
+      console.log(finishedGameState.scoringResult);
+
+      // The match cannot end in a draw, a new game will be started until a clear winner emerges
+      if (matchState.winnerPosition != null) {
+        console.log(`The winner of the match is at position ${matchState.winnerPosition}`);
+      }
+    });
+
+    this.client.socket.on('game.voidedGame', () => {
+      console.log('Game voided: all players passed');
+    });
+
     this.client.socket.on('game.bidRequest', (validBids) => {
       this.client.socket.emit('game.makeBid', this.artificialIntelligence.makeBid(validBids));
     });
@@ -38,10 +75,6 @@ export class Game {
 
     this.client.socket.on('game.cardRequest', (playableCards) => {
       this.client.socket.emit('game.playCard', this.artificialIntelligence.playCard(playableCards));
-    });
-
-    this.client.socket.on('game.handReceived', (hand) => {
-      console.log(hand);
     });
   }
 
