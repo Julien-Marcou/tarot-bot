@@ -18,6 +18,8 @@ export type EmitEvents = {
 
   'room.message': (message: string, callback?: Acknowledge<void>) => void;
 
+  'game.addBot': (callback?: Acknowledge<void>) => void;
+
   'game.makeBid': (bid: Bid, callback?: Acknowledge<void>) => void;
 
   'game.callPartner': (card: Card, callback?: Acknowledge<void>) => void;
