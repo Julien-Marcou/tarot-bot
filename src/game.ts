@@ -1,6 +1,6 @@
 import { ArtificialIntelligence } from './artificial-intelligence';
 import { Client } from './client';
-import { RoomSettings } from './models/dto/create-room.dto';
+import { RoomDto } from './models/dto/create-room.dto';
 import { WinConditionType } from './models/tarot/win-condition';
 
 export class Game {
@@ -10,8 +10,7 @@ export class Game {
     userAvatar: 'robot-bis',
   });
 
-  private readonly roomSettings: RoomSettings = {
-    roomId: 'ai-test',
+  private readonly roomSettings: RoomDto = {
     roomName: 'AI Test',
     roomPassword: 'AI Password',
     gameSize: 4,
