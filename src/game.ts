@@ -7,7 +7,7 @@ export class Game {
 
   private readonly client = new Client({
     userPseudo: 'Tarot Bot',
-    userAvatar: 'bee',
+    userAvatar: 'robot-bis',
   });
 
   private readonly roomSettings: RoomSettings = {
