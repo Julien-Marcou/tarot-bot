@@ -1,6 +1,6 @@
-import { Bid } from './models/tarot/bid';
-import { Card } from './models/tarot/card';
-import { DiscardableCards } from './models/tarot/discardable-cards';
+import type { Bid } from './models/tarot/bid';
+import type { Card } from './models/tarot/card';
+import type { DiscardableCards } from './models/tarot/discardable-cards';
 
 export class ArtificialIntelligence {
 

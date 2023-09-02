@@ -1,7 +1,7 @@
 import type { GameSize } from '../tarot/game-state';
-import { RoomId, RoomName } from '../room';
+import type { RoomId, RoomName } from '../room';
 import type { AuthenticateUserDto } from './authenticate-user.dto';
-import { WinConditionType } from '../tarot/win-condition';
+import type { WinConditionType } from '../tarot/win-condition';
 
 export type RoomDto = {
   roomName: RoomName;

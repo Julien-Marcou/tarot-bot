@@ -4,7 +4,7 @@ import type { Room } from '../room';
 import type { AuthenticateUserDto } from '../dto/authenticate-user.dto';
 import type { Bid } from '../tarot/bid';
 import type { Card } from '../tarot/card';
-import { Acknowledge } from './events';
+import type { Acknowledge } from './events';
 
 export type EmitEvents = {
 

@@ -1,7 +1,7 @@
 import { ArtificialIntelligence } from './artificial-intelligence';
 import { Client } from './client';
-import { RoomDto } from './models/dto/create-room.dto';
 import { WinConditionType } from './models/tarot/win-condition';
+import type { RoomDto } from './models/dto/create-room.dto';
 
 export class Game {
 

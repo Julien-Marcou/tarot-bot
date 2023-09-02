@@ -1,10 +1,10 @@
 import { io, Socket } from 'socket.io-client';
-import { AuthenticateUserDto } from './models/dto/authenticate-user.dto';
-import { RoomDto, RoomSettings } from './models/dto/create-room.dto';
-import { EmitEvents } from './models/events/emit.events';
 import { assertEventError } from './models/events/events';
-import { ListenEvents } from './models/events/listen.events';
-import { Room, RoomId } from './models/room';
+import type { AuthenticateUserDto } from './models/dto/authenticate-user.dto';
+import type { RoomDto, RoomSettings } from './models/dto/create-room.dto';
+import type { EmitEvents } from './models/events/emit.events';
+import type { ListenEvents } from './models/events/listen.events';
+import type { Room, RoomId } from './models/room';
 
 export class Client {
 
